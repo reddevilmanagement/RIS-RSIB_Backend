@@ -1,8 +1,5 @@
 """
-Model registry for Alembic.
-
-This file is used only by Alembic migrations.
+Temporary empty registry.
 """
-
 
 __all__ = []
