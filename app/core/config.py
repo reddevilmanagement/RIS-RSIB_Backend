@@ -30,18 +30,7 @@ class Settings(BaseSettings):
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
 
     # ─── CORS ─────────────────────────────────────────────────────────
-    CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:3000"]
-
-    @field_validator("CORS_ORIGINS", mode="before")
-    @classmethod
-    def parse_cors_origins(cls, v):
-        if isinstance(v, str):
-            return [origin.strip() for origin in v.split(",")]
-        return v
-
-import os
-
-print("CORS_ORIGINS ENV =", os.getenv("CORS_ORIGINS"))
-
+    CORS_ORIGINS: List[str] = ""
+        
 # Singleton instance
 settings = Settings()
