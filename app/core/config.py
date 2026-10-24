@@ -39,6 +39,9 @@ class Settings(BaseSettings):
             return [origin.strip() for origin in v.split(",")]
         return v
 
+import os
+
+print("CORS_ORIGINS ENV =", os.getenv("CORS_ORIGINS"))
 
 # Singleton instance
 settings = Settings()
