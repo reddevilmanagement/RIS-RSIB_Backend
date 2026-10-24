@@ -1,20 +1,8 @@
 """
 Model registry for Alembic.
 
-Import all models here so Alembic can discover them
-during migration autogeneration.
+This file is used only by Alembic migrations.
 """
 
-from app.models.user import User
-from app.models.patient import Patient
-from app.models.appointment import Appointment
-from app.models.study import Study
-from app.models.report import Report
 
-__all__ = [
-    "User",
-    "Patient",
-    "Appointment",
-    "Study",
-    "Report",
-]
+__all__ = []
